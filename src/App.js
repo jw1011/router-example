@@ -1,15 +1,19 @@
 //import logo from "./logo.svg";
 import "./App.css";
-import Homepage from "./page/Homepage";
-import Aboutpage from "./page/Aboutpage";
+import HomePage from "./page/Homepage";
+import AboutPage from "./page/Aboutpage";
+import ProductPage from "./page/ProductPage";
+import ProductDetailPage from "./page/ProductDetailPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/:id" element={<ProductDetailPage />} />
       </Routes>
     </div>
   );
